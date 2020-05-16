@@ -3,29 +3,87 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06228C7EBB0E49F0DF01D77A /* Pods_BitTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61260E7A3F752AC975F27596 /* Pods_BitTicker.framework */; };
 		9B34340F246AC3E900DE10A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34340E246AC3E900DE10A6 /* AppDelegate.swift */; };
-		9B343411246AC3E900DE10A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B343410246AC3E900DE10A6 /* SceneDelegate.swift */; };
-		9B343413246AC3E900DE10A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B343412246AC3E900DE10A6 /* ViewController.swift */; };
+		9B343413246AC3E900DE10A6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B343412246AC3E900DE10A6 /* LoginVC.swift */; };
 		9B343416246AC3E900DE10A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B343414246AC3E900DE10A6 /* Main.storyboard */; };
 		9B343419246AC3E900DE10A6 /* BitTicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B343417246AC3E900DE10A6 /* BitTicker.xcdatamodeld */; };
 		9B34341B246AC3EA00DE10A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B34341A246AC3EA00DE10A6 /* Assets.xcassets */; };
 		9B34341E246AC3EA00DE10A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B34341C246AC3EA00DE10A6 /* LaunchScreen.storyboard */; };
+		9B5AD215246DC6DE00D8ABA9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AD214246DC6DE00D8ABA9 /* UIColor+Extension.swift */; };
+		9B5AD217246DDC4D00D8ABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AD216246DDC4D00D8ABA9 /* SceneDelegate.swift */; };
+		9B609E95246FE53A0009BEC2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B609E94246FE53A0009BEC2 /* UIViewController+Extension.swift */; };
+		9B609E97247002A40009BEC2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B609E96247002A40009BEC2 /* Reachability.swift */; };
+		9B609E99247019630009BEC2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B609E98247019630009BEC2 /* Helper.swift */; };
+		9B77C220246BE16B00B4CBC5 /* WebSocketConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C21F246BE16B00B4CBC5 /* WebSocketConnectionManager.swift */; };
+		9B77C222246BFA7500B4CBC5 /* TickerRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C221246BFA7500B4CBC5 /* TickerRoot.swift */; };
+		9B77C224246BFBB900B4CBC5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C223246BFBB900B4CBC5 /* String+Extension.swift */; };
+		9B77C228246C2D9D00B4CBC5 /* TickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C226246C2D9D00B4CBC5 /* TickerCell.swift */; };
+		9B77C229246C2D9D00B4CBC5 /* TickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B77C227246C2D9D00B4CBC5 /* TickerCell.xib */; };
+		9B77C22B246C32F400B4CBC5 /* DefaultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C22A246C32F400B4CBC5 /* DefaultVC.swift */; };
+		9B77C22D246C4ABF00B4CBC5 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C22C246C4ABF00B4CBC5 /* UICollectionViewCell+Extension.swift */; };
+		9B77C22F246C563A00B4CBC5 /* TickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C22E246C563A00B4CBC5 /* TickerItem.swift */; };
+		9B77C231246C872D00B4CBC5 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C230246C872D00B4CBC5 /* LoginUser.swift */; };
+		9BDBB3E3246ADCA300529F28 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3E2246ADCA300529F28 /* GradientView.swift */; };
+		9BDBB3E6246AE9E200529F28 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3E5246AE9E200529F28 /* UIImageView+Extension.swift */; };
+		9BDBB3EB246B038F00529F28 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3E9246B038F00529F28 /* User+CoreDataClass.swift */; };
+		9BDBB3EC246B038F00529F28 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3EA246B038F00529F28 /* User+CoreDataProperties.swift */; };
+		9BDBB3EE246B048C00529F28 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3ED246B048C00529F28 /* PersistenceManager.swift */; };
+		9BDBB3F0246B073B00529F28 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3EF246B073B00529F28 /* RegisterVC.swift */; };
+		9BDBB3F2246B158900529F28 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3F1246B158900529F28 /* AppConstant.swift */; };
+		9BDBB3F4246B3EA800529F28 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3F3246B3EA800529F28 /* UITextField+Extension.swift */; };
+		9BDBB3F6246B3F3200529F28 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3F5246B3F3200529F28 /* Validator.swift */; };
+		9BDBB3F8246B50C400529F28 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBB3F7246B50C400529F28 /* LandingVC.swift */; };
+		9BEB9809246EC9F000CBB586 /* ChartViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB9808246EC9F000CBB586 /* ChartViewVC.swift */; };
+		9BEB980D246EF17200CBB586 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB980C246EF17200CBB586 /* UIView+Extension.swift */; };
+		9BEB980F246F0C5800CBB586 /* MyCustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB980E246F0C5800CBB586 /* MyCustomSlider.swift */; };
+		9BEB9811246F0CC500CBB586 /* BaseSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB9810246F0CC500CBB586 /* BaseSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00C1C146A591CDFFF895C96D /* Pods-BitTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitTicker.release.xcconfig"; path = "Target Support Files/Pods-BitTicker/Pods-BitTicker.release.xcconfig"; sourceTree = "<group>"; };
+		61260E7A3F752AC975F27596 /* Pods_BitTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757A32352AC113979994C19B /* Pods-BitTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitTicker.debug.xcconfig"; path = "Target Support Files/Pods-BitTicker/Pods-BitTicker.debug.xcconfig"; sourceTree = "<group>"; };
 		9B34340B246AC3E900DE10A6 /* BitTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B34340E246AC3E900DE10A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B343410246AC3E900DE10A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B343412246AC3E900DE10A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B343412246AC3E900DE10A6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		9B343415246AC3E900DE10A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B343418246AC3E900DE10A6 /* BitTicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BitTicker.xcdatamodel; sourceTree = "<group>"; };
 		9B34341A246AC3EA00DE10A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B34341D246AC3EA00DE10A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B34341F246AC3EA00DE10A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B5AD214246DC6DE00D8ABA9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9B5AD216246DDC4D00D8ABA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../.Trash/SceneDelegate.swift; sourceTree = "<group>"; };
+		9B609E94246FE53A0009BEC2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9B609E96247002A40009BEC2 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9B609E98247019630009BEC2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9B77C21F246BE16B00B4CBC5 /* WebSocketConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketConnectionManager.swift; sourceTree = "<group>"; };
+		9B77C221246BFA7500B4CBC5 /* TickerRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRoot.swift; sourceTree = "<group>"; };
+		9B77C223246BFBB900B4CBC5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9B77C226246C2D9D00B4CBC5 /* TickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerCell.swift; sourceTree = "<group>"; };
+		9B77C227246C2D9D00B4CBC5 /* TickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TickerCell.xib; sourceTree = "<group>"; };
+		9B77C22A246C32F400B4CBC5 /* DefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVC.swift; sourceTree = "<group>"; };
+		9B77C22C246C4ABF00B4CBC5 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		9B77C22E246C563A00B4CBC5 /* TickerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerItem.swift; sourceTree = "<group>"; };
+		9B77C230246C872D00B4CBC5 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		9BDBB3E2246ADCA300529F28 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		9BDBB3E5246AE9E200529F28 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		9BDBB3E9246B038F00529F28 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "BitTicker/CoreDataFiles/User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9BDBB3EA246B038F00529F28 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "BitTicker/CoreDataFiles/User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9BDBB3ED246B048C00529F28 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		9BDBB3EF246B073B00529F28 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		9BDBB3F1246B158900529F28 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		9BDBB3F3246B3EA800529F28 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		9BDBB3F5246B3F3200529F28 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		9BDBB3F7246B50C400529F28 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
+		9BEB9808246EC9F000CBB586 /* ChartViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewVC.swift; sourceTree = "<group>"; };
+		9BEB980C246EF17200CBB586 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9BEB980E246F0C5800CBB586 /* MyCustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomSlider.swift; sourceTree = "<group>"; };
+		9BEB9810246F0CC500CBB586 /* BaseSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +91,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06228C7EBB0E49F0DF01D77A /* Pods_BitTicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		408ECA3A6C12F5816624D467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61260E7A3F752AC975F27596 /* Pods_BitTicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CD48EF1FBA9EEA3E104BA06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				757A32352AC113979994C19B /* Pods-BitTicker.debug.xcconfig */,
+				00C1C146A591CDFFF895C96D /* Pods-BitTicker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9B343402246AC3E900DE10A6 = {
 			isa = PBXGroup;
 			children = (
 				9B34340D246AC3E900DE10A6 /* BitTicker */,
 				9B34340C246AC3E900DE10A6 /* Products */,
+				5CD48EF1FBA9EEA3E104BA06 /* Pods */,
+				408ECA3A6C12F5816624D467 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +136,131 @@
 		9B34340D246AC3E900DE10A6 /* BitTicker */ = {
 			isa = PBXGroup;
 			children = (
-				9B34340E246AC3E900DE10A6 /* AppDelegate.swift */,
-				9B343410246AC3E900DE10A6 /* SceneDelegate.swift */,
-				9B343412246AC3E900DE10A6 /* ViewController.swift */,
-				9B343414246AC3E900DE10A6 /* Main.storyboard */,
+				9B34342C246AC52000DE10A6 /* Design */,
+				9B34342B246AC4E500DE10A6 /* App */,
+				9B34342A246AC4B700DE10A6 /* SupportingFiles */,
+				9B343429246AC4A700DE10A6 /* Helper */,
+				9B343427246AC42A00DE10A6 /* Model */,
+				9B343425246AC3FF00DE10A6 /* View */,
+			);
+			path = BitTicker;
+			sourceTree = "<group>";
+		};
+		9B343425246AC3FF00DE10A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B343412246AC3E900DE10A6 /* LoginVC.swift */,
+				9BDBB3EF246B073B00529F28 /* RegisterVC.swift */,
+				9BDBB3F7246B50C400529F28 /* LandingVC.swift */,
+				9B77C22A246C32F400B4CBC5 /* DefaultVC.swift */,
+				9BEB9808246EC9F000CBB586 /* ChartViewVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B343427246AC42A00DE10A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B77C221246BFA7500B4CBC5 /* TickerRoot.swift */,
+				9B77C22E246C563A00B4CBC5 /* TickerItem.swift */,
+				9B77C230246C872D00B4CBC5 /* LoginUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B343428246AC49C00DE10A6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBB3ED246B048C00529F28 /* PersistenceManager.swift */,
+				9B77C21F246BE16B00B4CBC5 /* WebSocketConnectionManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9B343429246AC4A700DE10A6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9B343428246AC49C00DE10A6 /* Manager */,
+				9BDBB3E4246AE9B200529F28 /* Extensions */,
+				9BDBB3F1246B158900529F28 /* AppConstant.swift */,
+				9BDBB3F5246B3F3200529F28 /* Validator.swift */,
+				9B609E96247002A40009BEC2 /* Reachability.swift */,
+				9B609E98247019630009BEC2 /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9B34342A246AC4B700DE10A6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBB3F9246B532900529F28 /* CoreDataFiles */,
 				9B34341A246AC3EA00DE10A6 /* Assets.xcassets */,
-				9B34341C246AC3EA00DE10A6 /* LaunchScreen.storyboard */,
 				9B34341F246AC3EA00DE10A6 /* Info.plist */,
 				9B343417246AC3E900DE10A6 /* BitTicker.xcdatamodeld */,
 			);
-			path = BitTicker;
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9B34342B246AC4E500DE10A6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AD216246DDC4D00D8ABA9 /* SceneDelegate.swift */,
+				9B34340E246AC3E900DE10A6 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9B34342C246AC52000DE10A6 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				9B77C225246C2CF700B4CBC5 /* Cell */,
+				9BDBB3E1246ADC8B00529F28 /* Custom */,
+				9B343414246AC3E900DE10A6 /* Main.storyboard */,
+				9B34341C246AC3EA00DE10A6 /* LaunchScreen.storyboard */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		9B77C225246C2CF700B4CBC5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9B77C226246C2D9D00B4CBC5 /* TickerCell.swift */,
+				9B77C227246C2D9D00B4CBC5 /* TickerCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9BDBB3E1246ADC8B00529F28 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBB3E2246ADCA300529F28 /* GradientView.swift */,
+				9BEB980E246F0C5800CBB586 /* MyCustomSlider.swift */,
+				9BEB9810246F0CC500CBB586 /* BaseSlider.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9BDBB3E4246AE9B200529F28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBB3E5246AE9E200529F28 /* UIImageView+Extension.swift */,
+				9BDBB3F3246B3EA800529F28 /* UITextField+Extension.swift */,
+				9B77C223246BFBB900B4CBC5 /* String+Extension.swift */,
+				9B77C22C246C4ABF00B4CBC5 /* UICollectionViewCell+Extension.swift */,
+				9B5AD214246DC6DE00D8ABA9 /* UIColor+Extension.swift */,
+				9BEB980C246EF17200CBB586 /* UIView+Extension.swift */,
+				9B609E94246FE53A0009BEC2 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BDBB3F9246B532900529F28 /* CoreDataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBB3E9246B038F00529F28 /* User+CoreDataClass.swift */,
+				9BDBB3EA246B038F00529F28 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreDataFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B343422246AC3EA00DE10A6 /* Build configuration list for PBXNativeTarget "BitTicker" */;
 			buildPhases = (
+				917D5C283BC4B6B7FD2CBC95 /* [CP] Check Pods Manifest.lock */,
 				9B343407246AC3E900DE10A6 /* Sources */,
 				9B343408246AC3E900DE10A6 /* Frameworks */,
 				9B343409246AC3E900DE10A6 /* Resources */,
+				F96CBC45C903909DBFB243C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B34341E246AC3EA00DE10A6 /* LaunchScreen.storyboard in Resources */,
+				9B77C229246C2D9D00B4CBC5 /* TickerCell.xib in Resources */,
 				9B34341B246AC3EA00DE10A6 /* Assets.xcassets in Resources */,
 				9B343416246AC3E900DE10A6 /* Main.storyboard in Resources */,
 			);
@@ -136,15 +332,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		917D5C283BC4B6B7FD2CBC95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitTicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F96CBC45C903909DBFB243C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitTicker/Pods-BitTicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitTicker/Pods-BitTicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitTicker/Pods-BitTicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B343407246AC3E900DE10A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B343413246AC3E900DE10A6 /* ViewController.swift in Sources */,
+				9BDBB3E3246ADCA300529F28 /* GradientView.swift in Sources */,
+				9BDBB3F2246B158900529F28 /* AppConstant.swift in Sources */,
+				9B77C220246BE16B00B4CBC5 /* WebSocketConnectionManager.swift in Sources */,
+				9B343413246AC3E900DE10A6 /* LoginVC.swift in Sources */,
+				9B609E95246FE53A0009BEC2 /* UIViewController+Extension.swift in Sources */,
+				9BDBB3EC246B038F00529F28 /* User+CoreDataProperties.swift in Sources */,
+				9BDBB3F6246B3F3200529F28 /* Validator.swift in Sources */,
+				9B609E97247002A40009BEC2 /* Reachability.swift in Sources */,
 				9B34340F246AC3E900DE10A6 /* AppDelegate.swift in Sources */,
-				9B343411246AC3E900DE10A6 /* SceneDelegate.swift in Sources */,
+				9BEB9811246F0CC500CBB586 /* BaseSlider.swift in Sources */,
+				9B77C222246BFA7500B4CBC5 /* TickerRoot.swift in Sources */,
+				9B77C22D246C4ABF00B4CBC5 /* UICollectionViewCell+Extension.swift in Sources */,
+				9B77C224246BFBB900B4CBC5 /* String+Extension.swift in Sources */,
+				9B77C231246C872D00B4CBC5 /* LoginUser.swift in Sources */,
+				9BEB9809246EC9F000CBB586 /* ChartViewVC.swift in Sources */,
+				9BDBB3E6246AE9E200529F28 /* UIImageView+Extension.swift in Sources */,
+				9BEB980D246EF17200CBB586 /* UIView+Extension.swift in Sources */,
+				9B609E99247019630009BEC2 /* Helper.swift in Sources */,
+				9BEB980F246F0C5800CBB586 /* MyCustomSlider.swift in Sources */,
+				9B77C22F246C563A00B4CBC5 /* TickerItem.swift in Sources */,
+				9B5AD215246DC6DE00D8ABA9 /* UIColor+Extension.swift in Sources */,
+				9B77C228246C2D9D00B4CBC5 /* TickerCell.swift in Sources */,
+				9BDBB3EE246B048C00529F28 /* PersistenceManager.swift in Sources */,
 				9B343419246AC3E900DE10A6 /* BitTicker.xcdatamodeld in Sources */,
+				9BDBB3F8246B50C400529F28 /* LandingVC.swift in Sources */,
+				9BDBB3F4246B3EA800529F28 /* UITextField+Extension.swift in Sources */,
+				9B77C22B246C32F400B4CBC5 /* DefaultVC.swift in Sources */,
+				9BDBB3EB246B038F00529F28 /* User+CoreDataClass.swift in Sources */,
+				9BDBB3F0246B073B00529F28 /* RegisterVC.swift in Sources */,
+				9B5AD217246DDC4D00D8ABA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +550,7 @@
 		};
 		9B343423246AC3EA00DE10A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757A32352AC113979994C19B /* Pods-BitTicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +569,7 @@
 		};
 		9B343424246AC3EA00DE10A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00C1C146A591CDFFF895C96D /* Pods-BitTicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
