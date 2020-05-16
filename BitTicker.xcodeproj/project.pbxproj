@@ -138,7 +138,7 @@
 			children = (
 				9B34342C246AC52000DE10A6 /* Design */,
 				9B34342B246AC4E500DE10A6 /* App */,
-				9B34342A246AC4B700DE10A6 /* SupportingFiles */,
+				9B34342A246AC4B700DE10A6 /* Resources */,
 				9B343429246AC4A700DE10A6 /* Helper */,
 				9B343427246AC42A00DE10A6 /* Model */,
 				9B343425246AC3FF00DE10A6 /* View */,
@@ -190,7 +190,7 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		9B34342A246AC4B700DE10A6 /* SupportingFiles */ = {
+		9B34342A246AC4B700DE10A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				9BDBB3F9246B532900529F28 /* CoreDataFiles */,
@@ -198,7 +198,7 @@
 				9B34341F246AC3EA00DE10A6 /* Info.plist */,
 				9B343417246AC3E900DE10A6 /* BitTicker.xcdatamodeld */,
 			);
-			name = SupportingFiles;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		9B34342B246AC4E500DE10A6 /* App */ = {
