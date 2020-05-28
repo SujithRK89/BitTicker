@@ -107,15 +107,16 @@ class RegisterVC: UIViewController {
         
         // SetUp Username Textfield
         tfName.label.text = "User Name"
-        tfName.placeholder = "eg John"
+        tfName.placeholder = "John"
         tfName.setOutlineColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfName.setOutlineColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfName.setTextColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        tfName.setTextColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .editing)
+        tfName.setTextColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .editing)
         tfName.setFloatingLabelColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfName.setFloatingLabelColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfName.clearButtonMode = .always
         tfName.clearButtonMode = .whileEditing
+        tfName.delegate = self
         
         // SetUp Email Textfield
         tfEmail.label.text = "Email"
@@ -123,11 +124,12 @@ class RegisterVC: UIViewController {
         tfEmail.setOutlineColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfEmail.setOutlineColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfEmail.setTextColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        tfEmail.setTextColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .editing)
+        tfEmail.setTextColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .editing)
         tfEmail.setFloatingLabelColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfEmail.setFloatingLabelColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfEmail.clearButtonMode = .always
         tfEmail.clearButtonMode = .whileEditing
+        tfEmail.delegate = self
         
         // SetUp Password Textfield
         tfPassword.label.text = "Password"
@@ -136,11 +138,12 @@ class RegisterVC: UIViewController {
         tfPassword.setOutlineColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfPassword.setOutlineColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfPassword.setTextColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        tfPassword.setTextColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .editing)
+        tfPassword.setTextColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .editing)
         tfPassword.setFloatingLabelColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfPassword.setFloatingLabelColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfPassword.clearButtonMode = .always
         tfPassword.clearButtonMode = .whileEditing
+        tfPassword.delegate = self
         
         // SetUp Confirm Password Textfield
         tfConfirmPassword.label.text = "Confirm Password"
@@ -149,11 +152,12 @@ class RegisterVC: UIViewController {
         tfConfirmPassword.setOutlineColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfConfirmPassword.setOutlineColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfConfirmPassword.setTextColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        tfConfirmPassword.setTextColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .editing)
+        tfConfirmPassword.setTextColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .editing)
         tfConfirmPassword.setFloatingLabelColor(#colorLiteral(red: 0.02043063939, green: 0.517778635, blue: 0.5219944119, alpha: 1), for: .editing)
         tfConfirmPassword.setFloatingLabelColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfConfirmPassword.clearButtonMode = .always
         tfConfirmPassword.clearButtonMode = .whileEditing
+        tfConfirmPassword.delegate = self
         
         // make logo rounded
 //        ivLogo.makeRounded()
@@ -217,9 +221,17 @@ class RegisterVC: UIViewController {
 // implement delegates
 extension RegisterVC: UITextFieldDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if textField == tfName { 
+            tfEmail.becomeFirstResponder()
+        }
+        else if textField == tfEmail {
+            tfPassword.becomeFirstResponder()
+        }
+        else if textField == tfPassword {
+            tfConfirmPassword.becomeFirstResponder()
+        }
         return true
     }
 }

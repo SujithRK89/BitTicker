@@ -61,14 +61,16 @@ class LandingVC: UIViewController, WebSocketConnectionDelegate {
         // make name view cirle
 //        userNameView.makeCircleWithBorder()
         
+        // create reachability observer
         createReachabilityObserver()
         
+        // Monitor reachability change
         Reach().monitorReachabilityChanges()
         
     }
     
     func createReachabilityObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(LandingVC.networkStatusChanged(_:)), name: Notification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LandingVC.networkStatusChanged(_:)), name: Notification.Name(rawValue: AppConstants.NOTIFICATION_KEY_RECHABILITY_STATUS), object: nil)
     }
     
     @objc func networkStatusChanged(_ notification: Notification) {

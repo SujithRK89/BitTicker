@@ -9,7 +9,7 @@
 import UIKit.UIColor
 
 struct AppConstants {
-
+    
     // View controller identifier
     static let LOGIN_VC_IDENTIFIER = "loginVC"
     static let REGISTER_VC_IDENTIFIER = "registerVC"
@@ -25,7 +25,7 @@ struct AppConstants {
     static let SOCKET_URL = "wss://api2.poloniex.com"
     
     // user default key
-    static let NAME_KEY = "nme"
+    static let NAME_KEY = "name"
     static let IS_LOCKED_IN_KEY = "is_locked_in"
     
     // Notification Name
@@ -40,6 +40,8 @@ struct AppConstants {
     static let NOTIFICATION_KEY_LOGIN_FAILED = "LoginFailed"
     static let NOTIFICATION_KEY_LOGIN_PASSWORD_INCORRECT = "LoginEmailPassMissmatch"
     static let NOTIFICATION_KEY_LOGIN_RECORD_NOT_FOUND = "NoRecordFound"
+    // Reachability
+    static let NOTIFICATION_KEY_RECHABILITY_STATUS = "ReachabilityStatusChangedNotification"
     
     static let THEME_COLOR = UIColor.init(rgb: 0x3A8284)
     

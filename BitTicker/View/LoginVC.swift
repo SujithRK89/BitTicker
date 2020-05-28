@@ -74,6 +74,7 @@ class LoginVC: UIViewController {
         tfUserName.setFloatingLabelColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfUserName.clearButtonMode = .always
         tfUserName.clearButtonMode = .whileEditing
+        tfUserName.delegate = self
         
         // Setup Password textfield
         tfPassword.label.text = "Password"
@@ -87,6 +88,7 @@ class LoginVC: UIViewController {
         tfPassword.setFloatingLabelColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         tfPassword.clearButtonMode = .always
         tfPassword.clearButtonMode = .whileEditing
+        tfPassword.delegate = self
         
         
         // make logo rounded
@@ -222,9 +224,11 @@ class LoginVC: UIViewController {
 // implement delegates
 extension LoginVC: UITextFieldDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if textField == tfUserName { // Switch focus to other text field
+            tfPassword.becomeFirstResponder()
+        }
         return true
     }
 }

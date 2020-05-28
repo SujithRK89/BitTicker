@@ -42,7 +42,7 @@ enum VaildatorFactory {
     }
 }
 
-//"J3-123A" i.e
+// Project identifier validator
 struct ProjectIdentifierValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         do {
@@ -56,7 +56,7 @@ struct ProjectIdentifierValidator: ValidatorConvertible {
     }
 }
 
-
+// Age Validator
 class AgeValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         guard value.count > 0 else {throw ValidationError("Age is required")}
@@ -67,6 +67,7 @@ class AgeValidator: ValidatorConvertible {
     }
 }
 
+// Required Field Validator
 struct RequiredFieldValidator: ValidatorConvertible {
     private let fieldName: String
     
@@ -82,6 +83,7 @@ struct RequiredFieldValidator: ValidatorConvertible {
     }
 }
 
+// UserName Validator
 struct UserNameValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         guard value.count >= 3 else {
@@ -102,6 +104,7 @@ struct UserNameValidator: ValidatorConvertible {
     }
 }
 
+// Password Validator
 struct PasswordValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         guard value != "" else {throw ValidationError("Password is Required")}
@@ -118,6 +121,7 @@ struct PasswordValidator: ValidatorConvertible {
     }
 }
 
+// Email Validator
 struct EmailValidator: ValidatorConvertible {
     func validated(_ value: String) throws -> String {
         do {
